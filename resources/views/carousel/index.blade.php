@@ -14,6 +14,7 @@
 
 </div>
 <a href="{{route('carousel.create')}}" class='btn btn-primary justify-content-center'>Ajouter</a>
+<a href="{{route('mailito')}}" class='btn btn-danger justify-content-center'>Envoyer mail</a>
 
 <table class="table container">
     <thead>
@@ -41,4 +42,8 @@
       @endforeach
     </tbody>
 </table>
+
+
+
+
 @endsection

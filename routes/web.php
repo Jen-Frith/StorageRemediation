@@ -24,5 +24,19 @@ Route::get('/indexo', function(){
 
 Route::resource('/carousel', 'CarouselController');
 
-
+Route::get('/mail', 'ContactController@store')->name('contact.store');
 // Route::resource('/utilisateur', 'UtilisateurController');
+
+
+Route::get('test', function () {
+
+    $user = [
+        'name' => 'Brahiam',
+        'info' => 'Laravel Developer'
+    ];
+
+    \Mail::to('rua.brahiam@gmail.com')->send(new \App\Mail\NewMail($user));
+
+    dd("success");
+
+})->name('mailito');
